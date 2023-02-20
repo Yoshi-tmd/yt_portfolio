@@ -9,6 +9,28 @@
     height: 100vh;/*高さを全画面にあわせる*/
 } 
 
+h1.mainTitle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    letter-spacing: 0.1em;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+    
+nav ul li a{
+    text-decoration: none;
+    color: #666;
+    padding:10px;
+}
+    
+section{
+    padding:100px 0;
+}
+
 #video-area{
     position: fixed;
     z-index: -1;/*最背面に設定*/
