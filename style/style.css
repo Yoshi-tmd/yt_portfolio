@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* *{border: 1px solid red;} */
 
 /*========= 背景動画設定のCSS ===============*/
 
@@ -9,10 +10,25 @@
     height: 100vh;/*高さを全画面にあわせる*/
 } 
 
-h1.mainTitle{
+/*見出し設定*/
+h1{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
     font-family: 'Montserrat', sans-serif;
     font-size: 70px;
     letter-spacing: 0.1em;
+    color:#fff;
+    text-shadow: 0 0 15px #666;
+}
+
+nav{
+    margin: 0;
+    padding: 10px 0;
 }
 
 nav ul{
@@ -24,6 +40,7 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     color: #666;
+    font-size: 20px;
     padding:10px;
 }
     
@@ -55,23 +72,20 @@ section{
     min-width: 100%;
 }
 
-/*見出し設定*/
-h1{
-    /*要素の配置*/
-    position:absolute;
-    /*要素を天地中央寄せ*/
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    /*見た目の調整*/
-    color:#fff;
-    text-shadow: 0 0 15px #666;
-}
 
 /*========= レイアウトのためのCSS ===============*/
 
 #container{
   background:#fff;
-  padding:300px 0;
+  padding:50px 0;
   text-align: center;
+}
+
+footer {
+    bottom: 0; /*下に固定*/
+    background:#5f4f21;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
 }
