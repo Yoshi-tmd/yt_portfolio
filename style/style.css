@@ -28,7 +28,7 @@ h1{
 
 nav{
     margin: 0;
-    padding: 10px 0;
+    padding: 12px 20px;
 }
 
 nav ul{
@@ -41,7 +41,7 @@ nav ul li a{
     text-decoration: none;
     color: #666;
     font-size: 20px;
-    padding:10px;
+    padding:15px;
 }
     
 section{
