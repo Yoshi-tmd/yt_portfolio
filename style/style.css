@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* *{border: 1px solid red;} */
+*{border: 1px solid red;}
 
 /*========= 背景動画設定のCSS ===============*/
 
@@ -26,6 +26,18 @@ h1{
     text-shadow: 0 0 15px #666;
 }
 
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.01em;
+}
+h2{
+    font-size: 55px;
+    padding: 3%;
+}
+h3{
+    font-size: 24px;
+    padding: 2%;
+}
 nav{
     margin: 0;
     padding: 12px 20px;
@@ -76,11 +88,95 @@ section{
 /*========= レイアウトのためのCSS ===============*/
 
 #container{
-  background:#fff;
-  padding:50px 0;
-  text-align: center;
+    margin: 0 auto;
+    background:#fff;
+    padding:50px 5vw;
+    text-align: center;
 }
 
+/* アイテムのためのCSS */
+#wrap{
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+#wrap div.item{
+    margin: 3% 0;
+    padding: 0px;
+    width: 45%;
+    position:relative;/*テキストの基点となる位置を定義*/
+}
+
+@media not all and (min-width: 768px) {
+    #wrap div.item {
+        width: 100%;
+    }
+  
+    #wrap div.item:not(:nth-child(2n+2)) {
+        margin-right: 0;
+    }
+  
+    #wrap div.item:nth-child(n+1) {
+        margin-top: 30px;
+    }
+}
+
+#wrap div.item a{
+    color: #333;
+    text-decoration: none;
+}
+
+#wrap div.item img{
+    width: 100%;
+}
+
+#wrap div.item span.mask{
+    position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+}
+
+#wrap div.item span.mask::before{
+    content:"";
+    position: absolute;
+    z-index: 2;
+    left:0;
+    top:0;
+    opacity:0;/*透過0*/
+    transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+    background: rgba(50, 50, 50, 0.8);/*背景色*/
+    width:100%;
+    height: 100%; 
+}
+
+#wrap div.item:hover span.mask::before{/*hoverした時の変化*/
+    opacity:1;/*透過なしに変化*/
+    transform: translateY(0);
+}
+
+#wrap div.item span.cap{/*画像の上のテキスト*/
+    position: absolute;
+    opacity:0;/*透過0*/
+    transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    z-index:3;/*テキストを前面に出す*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+    color: #fff;/*テキストの色を変えたい場合はここを修正*/
+    line-height: 1.5;/*行の高さを1.5にする*/
+}
+
+#wrap div.item:hover span.cap{/*hoverした時の変化*/
+    opacity:1;/*透過なしに変化*/
+}
+
+
+/* footerのCSS */
 footer {
     bottom: 0; /*下に固定*/
     background:#5f4f21;
