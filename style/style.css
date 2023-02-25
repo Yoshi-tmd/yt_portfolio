@@ -34,12 +34,13 @@ h2, h3 {
 h2{
     color: #8FD5FF;
     font-size: 55px;
-    padding: 3%;
+    padding: 4%;
 }
 h3{
     color: #333;
     font-size: 24px;
-    padding: 2%;
+    padding: 2% 0;
+    border-bottom: 1px solid #314c5b;
 }
 
 /*===== ナビゲーションのCSS =====*/
@@ -99,21 +100,21 @@ nav ul li a{
 }
 
 section{
-    padding:100px 0;
+    padding:30px 0;
 }
 
 /* アイテムのためのCSS */
 #wrap{
     margin: 0 auto;
-    padding: 5%;
+    padding: 2% 6%;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
 }
 
 #wrap div.item{
-    margin: 3% 0;
-    padding: 0px;
+    margin: 0 0 3%;
+    padding: 0;
     width: 45%;
     position:relative;/*テキストの基点となる位置を定義*/
 }
@@ -201,8 +202,19 @@ section{
 .modaal-close:hover:after,
 .modaal-close:hover:before{
     background:#5C8EAB;
-}  
+}
 
+p.keylink a{
+    color: #333;
+    font-size: 20px;
+    outline: none;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+p.keylink a:hover{
+    opacity: 0.3;
+}
 /* footerのCSS */
 footer {
     bottom: 0; /*下に固定*/
