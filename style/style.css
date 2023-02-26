@@ -40,7 +40,6 @@ h3{
     color: #333;
     font-size: 24px;
     padding: 2% 0;
-    border-bottom: 1px solid #314c5b;
 }
 
 /*===== ナビゲーションのCSS =====*/
@@ -59,8 +58,41 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     color: #666;
-    font-size: 20px;
-    padding:15px;
+    font-size: 25px;
+    padding:6px 20px;
+	position: relative;/*線の基点とするためrelativeを指定*/
+}
+nav ul li a:hover{
+	color:#05af66;
+}
+
+/* 左から右に線が伸びるアニメーション */
+nav ul li a::after{
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background:#05af66;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left top;/*左上基点*/
+}
+
+/*現在地とhoverの設定*/
+nav ul li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+@media not all and (min-width: 768px) {
+    nav ul li a{
+        font-size: 20px;
+        padding:10px;
+    }    
 }
 
 /*========= 背景動画設定のCSS ===============*/
@@ -101,6 +133,7 @@ nav ul li a{
 
 section{
     padding:30px 0;
+    border-bottom: 1px solid #314c5b;
 }
 
 /* アイテムのためのCSS */
@@ -218,7 +251,7 @@ p.keylink a:hover{
 /* footerのCSS */
 footer {
     bottom: 0; /*下に固定*/
-    background:#5f4f21;
+    background:#396f6a;
     width: 100%;
     padding: 20px 0;
     text-align: center;
