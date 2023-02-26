@@ -217,6 +217,7 @@ section{
     opacity:1;/*透過なしに変化*/
 }
 
+/* Itemの説明書きのCSS */
 #wrap div.item span.description a{
     display: inline-block;
     width: 100%;
