@@ -217,6 +217,17 @@ section{
     opacity:1;/*透過なしに変化*/
 }
 
+#wrap div.item span.description a{
+    display: inline-block;
+    width: 100%;
+    padding: 0.5% 1%;
+    text-align: right;
+}
+
+#wrap div.item span.description a:hover{
+    opacity: 0.3;/*透過なしに変化*/
+}
+
 /*========= モーダル表示のためのCSS ===============*/
 
 /*動画表示のモーダルの余白を変更したい場合*/
