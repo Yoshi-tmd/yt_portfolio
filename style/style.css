@@ -131,7 +131,7 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-section{
+section.main-area{
     padding:30px 0;
     border-bottom: 1px solid #314c5b;
 }
@@ -230,6 +230,11 @@ section{
 }
 
 /*========= モーダル表示のためのCSS ===============*/
+
+/*全て共通：hideエリアをはじめは非表示*/
+.hide-area{
+    display: none;
+}
 
 /*動画表示のモーダルの余白を変更したい場合*/
 .modaal-video .modaal-inner-wrapper{
