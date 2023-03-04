@@ -10,6 +10,8 @@
 //テキストを含む一般的なモーダル
 $(".itemDescriptionLink").modaal({
 	overlay_close:true,//モーダル背景クリック時に閉じるか
+  background: '#5C8EAB', // 背景色
+  overlay_opacity:0.8, // 透過具合
 	before_open:function(){// モーダルが開く前に行う動作
 		$('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
 	},
