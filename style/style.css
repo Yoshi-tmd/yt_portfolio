@@ -2,6 +2,11 @@
 
 /* *{border: 1px solid red;} */
 
+html{
+    font-family: "Noto Sans JP";
+    font-family: 'Montserrat',Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+}
+
 /*header設定*/
 #header{
     position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
@@ -17,7 +22,6 @@ h1{
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     /*見た目の調整*/
-    font-family: 'Montserrat', sans-serif;
     font-size: 70px;
     letter-spacing: 0.1em;
     color:#fff;
@@ -28,7 +32,6 @@ h1 span{
 }
 
 h2, h3 {
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.01em;
 }
 h2{
@@ -39,6 +42,13 @@ h2{
 h3{
     color: #333;
     font-size: 24px;
+    padding: 2% 0;
+}
+h4{
+    color: #333;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
     padding: 2% 0;
 }
 
@@ -63,7 +73,7 @@ nav ul li a{
 	position: relative;/*線の基点とするためrelativeを指定*/
 }
 nav ul li a:hover{
-	color:#05af66;
+	color:#333;
 }
 
 /* 左から右に線が伸びるアニメーション */
@@ -76,7 +86,7 @@ nav ul li a::after{
     /*線の形状*/
     width: 80%;
     height: 2px;
-    background:#05af66;
+    background:#333;
     /*アニメーションの指定*/
     transition: all .3s;
     transform: scale(0, 1);/*X方向0、Y方向1*/
@@ -252,6 +262,46 @@ section.main-area{
 .modaal-close:hover:after,
 .modaal-close:hover:before{
     background:#5C8EAB;
+}
+
+/* テキストのモーダルのためのCSS */
+.item-box{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content:space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    padding: 2%;
+}
+
+.item-box .item-text{
+    margin: 0 0 3%;
+    padding: 0 3%;
+    height: 50%;
+    width: 48%;
+    background: cyan;
+}
+
+.item-box .item-image{
+    margin: 0 0 3%;
+    padding: 3% 4%;
+    height: 50%;
+    width: 48%;
+    background: #ffd500;
+}
+
+@media not all and (min-width: 768px) {
+    .item-box{
+        display: inline-block;
+        height: 100%;
+    }
+    .item-box .item-text, .item-box .item-image {
+        width: 100%;
+        padding: 5% 2%;
+    }
 }
 
 p.keylink a{
