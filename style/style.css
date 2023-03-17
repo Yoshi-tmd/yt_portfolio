@@ -52,6 +52,23 @@ h4{
     padding: 2% 0;
 }
 
+.header-var {
+    background: #bbb;
+}
+
+.h-text-other {
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    color:#364b41;
+}
+
 /*===== ナビゲーションのCSS =====*/
 
 nav{
